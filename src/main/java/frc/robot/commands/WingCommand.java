@@ -52,7 +52,7 @@ public class WingCommand extends CommandBase {
     } 
     */
 
-
+/* 
     if (leftTrigger >= 0.9){
     
       if (leftHasTargets){
@@ -68,7 +68,7 @@ public class WingCommand extends CommandBase {
           }
         }
       }
-    }
+    }*/
     
 
     /** 

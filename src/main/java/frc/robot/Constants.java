@@ -84,8 +84,9 @@ public final class Constants {
 
 
        // Camera Conatants
-    public static String leftSideCamera = new String("LeftSideCamera");
-    public static String rightSideCamera = new String("RightSideCamera");
+    public static String leftSideCamera = new String("leftSideCamera");
+    public static String rightSideCamera = new String("rightSideCamera");
+    public static String shootCamera = new String("shootCamera");
 
 
       // Servo Constants
@@ -96,15 +97,6 @@ public final class Constants {
    public static double rightServoDown = 0;
    public static double leftServoUp = 0.44;
    public static double rightServoUp = 0.46;
-
-
-
-      // Gyro Constants
-
-   public static int kGyroPort = 0;
-   	// gyro calibration constant, may need to be adjusted;
-	// gyro value of 360 is set to correspond to one full revolution
-	public static double kVoltsPerDegreePerSecond = 0.0128;
 
 
 }

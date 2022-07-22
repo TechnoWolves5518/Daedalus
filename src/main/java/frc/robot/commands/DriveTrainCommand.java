@@ -8,19 +8,11 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Robot;
 import frc.robot.Constants;
-import edu.wpi.first.wpilibj.ADIS16448_IMU;
-//import edu.wpi.first.wpilibj.AnalogGyro;
-//import edu.wpi.first.wpilibj.ADXRS450_Gyro;
-import edu.wpi.first.wpilibj.ADIS16470_IMU;
-import edu.wpi.first.wpilibj.SPI;
-
 
 
 
 public class DriveTrainCommand extends CommandBase {
   /** Creates a new DriveTrainCommand. */
-  //private static final SPI.Port kGyroPort = SPI.Port.kOnboardCS0;
-  //private ADIS16470_IMU m_IMUMG = new ADIS16470_IMU();
   
   
   public DriveTrainCommand() {
@@ -34,18 +26,15 @@ public class DriveTrainCommand extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {
-  }
+  public void initialize() {}
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
 
-    double angle = Robot.m_IMUMG.getAngle();
     double strafe = Robot.m_robotContainer.GetDriverRaeAxis(Constants.XBOX_LSTICKX);
     double drive = Robot.m_robotContainer.GetDriverRaeAxis(Constants.XBOX_LSTICKY);
     double turn = Robot.m_robotContainer.GetDriverRaeAxis(Constants.XBOX_RSTICKX);  
-   
 
     if (drive <=0.05){
       if(drive >= -0.05){
@@ -64,7 +53,7 @@ public class DriveTrainCommand extends CommandBase {
     }
    
   
-    Robot.m_driveTrainSub.mecanumDrive1(drive,strafe,turn,angle);
+    Robot.m_driveTrainSub.mecanumDrive1(drive,strafe,turn);
 
   }
 
@@ -72,7 +61,7 @@ public class DriveTrainCommand extends CommandBase {
   @Override
   public void end(boolean interrupted) {
 
-    Robot.m_driveTrainSub.mecanumDrive1(0,0,0,0);
+    Robot.m_driveTrainSub.mecanumDrive1(0,0,0);
 
   }
 

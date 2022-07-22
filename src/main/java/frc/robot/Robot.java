@@ -14,10 +14,6 @@ import frc.robot.subsystems.PneaumaticSubsystem;
 import frc.robot.subsystems.RightIntakeSubsystem;
 import frc.robot.subsystems.ServoSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
-//import edu.wpi.first.wpilibj.ADXRS450_Gyro;
-//import edu.wpi.first.wpilibj.SPI;
-import edu.wpi.first.wpilibj.ADIS16470_IMU;
-
 
 
 
@@ -40,23 +36,21 @@ public class Robot extends TimedRobot {
   public static RightIntakeSubsystem m_rightIntakeSubsystem = new RightIntakeSubsystem();
   public static ShooterSubsystem m_shooterSubsystem = new ShooterSubsystem();
   public static ServoSubsystem m_servoSubsystem = new ServoSubsystem();
+
   Command m_autonomousCommand;
 
+
+
+
+
+
+
   public static RobotContainer m_robotContainer;
-  public static ADIS16470_IMU m_IMUMG = new ADIS16470_IMU();
- 
 
-
-
-
-
-
-
- /**
+  /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
-
   @Override
   public void robotInit() {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
@@ -64,10 +58,10 @@ public class Robot extends TimedRobot {
     m_robotContainer = new RobotContainer();
 
     m_autonomousCommand = new LeftIntake();
-    m_IMUMG.calibrate();
 
-     
-    }
+
+
+  }
 
   /**
    * This function is called every robot packet, no matter the mode. Use this for items like

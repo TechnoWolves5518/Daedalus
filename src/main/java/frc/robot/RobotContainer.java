@@ -39,6 +39,7 @@ JoystickButton startButton = new JoystickButton(driverController, Constants.XBOX
 JoystickButton backButton = new JoystickButton(driverController, Constants.XBOX_BACK);
 JoystickButton aButton = new JoystickButton(driverController, Constants.XBOX_ABTN);
 JoystickButton bButton = new JoystickButton(driverController, Constants.XBOX_BBTN);
+JoystickButton lStick = new JoystickButton(driverController, Constants.XBOX_LSTICK);
 
 double zLLtrigger = driverController.getRawAxis(Constants.XBOX_LTRIGGER);
 
@@ -85,6 +86,7 @@ double zLLtrigger = driverController.getRawAxis(Constants.XBOX_LTRIGGER);
     lBButton.whenPressed(new LeftIntake());
     rBButton.whenPressed(new RightIntake());
 
+    
   }
 
   /**
